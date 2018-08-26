@@ -15,6 +15,7 @@ public class Level3CodingExam {
 	 * **/
 	@Test
 	public void testWinner() {
+		VoteProcessor vp = new VoteProcessor();
 		ArrayList<String> votes = new ArrayList<String>();
 		votes.add("pope francis");
 		votes.add("Pope Francis");
@@ -27,7 +28,7 @@ public class Level3CodingExam {
 		votes.add("Pope francis");
 		votes.add("Pope Francis");
 		votes.add("Edward Snowden");
-
+		vp.calculateElectionWinner(votes);
 		assertEquals("pope francis", new VoteProcessor().calculateElectionWinner(votes));
 	}
 
